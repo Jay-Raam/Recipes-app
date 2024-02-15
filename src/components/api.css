@@ -1,0 +1,194 @@
+.input-container {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.input {
+  margin: 0 auto;
+  font-size: 1em;
+  padding: 0.6em 1em;
+  border: none;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+  width: 288px;
+  color: #333;
+}
+
+.input:hover {
+  background-color: #f2f2f2;
+}
+
+.input:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 90px;
+  background: rgb(156, 99, 213);
+  background: linear-gradient(
+    141deg,
+    rgba(156, 99, 213, 1) 0%,
+    rgba(208, 130, 219, 1) 80%
+  );
+  width: 224px;
+  outline: none;
+  border: none;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.btn:hover {
+  background: rgb(156, 99, 213);
+  background: linear-gradient(
+    141deg,
+    rgba(156, 99, 213, 0.718) 0%,
+    rgba(208, 130, 219, 0.718) 80%
+  );
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.highlight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6c63ff;
+  transition: width 0.3s ease;
+}
+
+.input:focus + .highlight {
+  width: 100%;
+}
+
+/* Optional: Animation on focus */
+@keyframes input-focus {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+
+  to {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.input:focus {
+  animation: input-focus 0.3s ease;
+}
+
+/* layout */
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.recipes-continer {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gal-001 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.gal-002 {
+  width: 290px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.gal-003 {
+  font-size: 16px;
+  text-align: center;
+}
+
+.gal-004 {
+  width: 200px;
+  padding: 10px 0;
+  background: rgb(99, 213, 141);
+  background: linear-gradient(
+    52deg,
+    rgba(99, 213, 141, 1) 0%,
+    rgba(92, 149, 177, 1) 80%
+  );
+  border-radius: 9%;
+  color: #fff;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.gal-004:hover {
+  background: rgb(99, 213, 141);
+  background: linear-gradient(
+    52deg,
+    rgba(99, 213, 141, 0.718) 0%,
+    rgba(92, 149, 177, 0.718) 80%
+  );
+}
+
+.flex-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* For screen sizes up to 600px */
+@media screen and (max-width: 768px) {
+  .input-container {
+    width: 300px;
+  }
+  .recipes {
+    flex-direction: column;
+    width: 100%;
+  }
+  .recipes-continer {
+    width: 100%;
+    text-align: start;
+  }
+
+  .input,
+  .btn {
+    width: 91%;
+    max-width: none;
+  }
+
+  .gal-002 {
+    width: 100%;
+  }
+
+  .recipes-container {
+    width: 100%;
+  }
+}
